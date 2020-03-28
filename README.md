@@ -30,7 +30,9 @@ To start the Python notebook, run:
 
 ## Input
 
-`out_of_country.csv` should have a format like this:
+In a file called `out_of_country.csv`, fill in your own travel history.
+
+It should have a format like this:
 
 ```CSV
 date,to_destination,re-entry
@@ -40,6 +42,18 @@ date,to_destination,re-entry
 2021-01-02,Resident Country A,1
 ```
 
+In this example, a person travelled to the `to_destination`: "Visiting Country B" on `date`: 2020-01-01. They returned to their resident country on the next day and the `re-entry` was set to `1`, as they were re-entering their resident country.
+
 ## Output
 
-The output will be saved as `continuous_residence_under_180_days.csv`, which should return the above as all `False`. The total days outside of your resident country at any point of the rolling year period would be under 180 days.
+The output will be saved as `continuous_residence_under_180_days.csv`.
+
+It will have a format like this:
+
+```csv
+date,re-entry
+2020-01-01,False
+2024-01-01,True
+```
+
+If the total days of continuous residency is below 180 days at any point in a rolling window of a year (365 days), it will return `True`.
