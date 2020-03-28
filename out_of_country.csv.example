@@ -1,0 +1,5 @@
+date,to_destination,re-entry
+2020-01-01,Visiting Country B,0
+2020-01-02,Resident Country A,1
+2021-01-01,Visiting Country C,0
+2021-01-02,Resident Country A,1
